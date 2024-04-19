@@ -4,7 +4,8 @@ import nfc
 
 #接続時(タッチした時)に呼び出されるハンドラ
 def on_connect(tag: nfc.tag.Tag) -> bool:
-    print("connected: ".join(tag.dump()));
+    print("connected")
+    print("\n".join(tag.dump()))
     return True #Trueにすると、カードを離すまで待つ。Falseにすると、処理を停止しない
 
 def on_release(tag: nfc.tag.Tag) -> None:
